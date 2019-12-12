@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: linen;
+}
+
+td {
+    border-top-style: solid;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <tr style="font-weight:bold; background-color: orange">
+    <td width="300px">Single-instance version cases</td>
+    <td>Graph Results Screenshot</td>
+    <td>Average Query Time(ms)</td>
+    <td>Average Search Servlet Time(ms)</td>
+    <td>Average JDBC Time(ms)</td>
+    <td>Analysis</td>
+  </tr>
+  <tr>
+    <td>Case 1: HTTP/1 thread</td>
+    <td><img src="/project5/fabflix/test_logs/single_case1/graph_results.png" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>81</td>
+    <td>7.82</td>
+    <td>7.55</td>
+    <td>The HTTP single thread request is showing expected result times.</td>
+  </tr>
+  <tr>
+    <td>Case 2: HTTP/10 threads</td>
+    <td><img src="/project5/fabflix/test_logs/single_case2/graph_results.png" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>83</td>
+    <td>10.6</td>
+    <td>7.36</td>
+    <td>It makes sense that the difference in time from a single thread to 10 threads to process request would be small however the overall time to handle 10 different threads may take slightly more time.</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTPS/10 threads</td>
+    <td><img src="/project5/fabflix/test_logs/single_case3/graph_results.png" alt="Graph Results Screenshot Case 3" style="width:304px;height:228px;"></td>
+    <td>131</td>
+    <td>33.7</td>
+    <td>10.8</td>
+    <td>The HTTPS case is shown to be vastly slower than the HTTP cases</td>
+  </tr>
+  <tr>
+    <td>Case 4: HTTP/10 threads/No prepared statements</td>
+    <td><img src="/project5/fabflix/graph_results_case4.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>Professor</td>
+    <td>said</td>
+    <td>ok</td>
+    <td>Professor said we did not need to worry about this one.</td>
+  </tr>
+  <tr>
+    <td>Case 5: HTTP/10 threads/No connection pooling</td>
+    <td><img src="/project5/fabflix/test_logs/single_case5/graph_results.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>87</td>
+    <td>21.7</td>
+    <td>8.72</td>
+    <td>The non-connection pooling is showing more overhead because of the reopening and closing of connections </td>
+  </tr>
+
+</table> 
+
+
+<table style="width:100%">
+  <tr style="font-weight:bold; background-color: orange">
+    <td width="300px">Scaled version cases</td>
+    <td>Graph Results Screenshot</td>
+    <td>Average Query Time(ms)</td>
+    <td>Average Search Servlet Time(ms)</td>
+    <td>Average JDBC Time(ms)</td>
+    <td>Analysis</td>
+  </tr>
+  <tr>
+    <td>Case 1: HTTP/1 thread</td>
+    <td><img src="/project5/fabflix/test_logs/scaled_case1/graph_results.png" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>80</td>
+    <td>7.68</td>
+    <td>7.44</td>
+    <td>There is little difference between the scaled and non-scaled version of the HTTP single thread request.</td>
+  </tr>
+  <tr>
+    <td>Case 2: HTTP/10 threads</td>
+    <td><img src="/project5/fabflix/test_logs/scaled_case2/graph_results.png" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>83</td>
+    <td>10.8</td>
+    <td>7.37</td>
+    <td>The scaled is showing slightly more overhead from the added delay of being rerouted.</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTP/10 threads/No prepared statements</td>
+    <td><img src="graph_results_case3.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>Professor</td>
+    <td>said</td>
+    <td>ok</td>
+    <td>The professor said we did not need to worry about this one.</td>
+  </tr>
+  <tr>
+    <td>Case 4: HTTP/10 threads/No connection pooling</td>
+    <td><img src="/project5/fabflix/test_logs/scaled_case4/graph_results.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>104</td>
+    <td>29.7</td>
+    <td>9.66</td>
+    <td>The scaled non-connection pooling is showing more overhead because of the reopening and closing of connections and the added delay of being rerouted.</td>
+  </tr>
+
+</table> 
+
+</body>
+</html>
