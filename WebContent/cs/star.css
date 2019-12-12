@@ -1,0 +1,93 @@
+/* ====================================================================================================
+   DATE:      06 APR 2018
+   AUTHORS:   Kelly McKeown   David Hopkins
+   UCInetIDs: KPMCKEOW        HOPKINSD
+   ID#'s:     42806243        70404050
+   CLASS:     CS 122B
+   PROJECT:   #2
+   ----------------------------------------------------------------------------------------------------
+   DESCRIPTION:
+   ====================================================================================================
+ */
+
+#contentDiv {
+    height: 800px;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+#starContainer {
+    height: 640px;
+    width: 560px;
+    top: 40px;
+    left: 0px;
+    display: block;
+    position: absolute;
+    background-color: #333333;
+    border: 1px solid #eeeeee;
+    font-family: "Julius Sans One", sans-serif;
+    color: #eeeeee;
+    font-size: 12px;
+}
+
+.starName {
+    width: 540px;
+    height: 32px;
+    font-size: 30px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: #ff0010;
+    font-weight: bold;
+}
+
+.starYear {
+    height: 20px;
+    width: 250px;
+    top: 50px;
+    left: 10px;
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    /*border: 1px solid #eeeeee;*/
+}
+
+#starsInText {
+    height: 26px;
+    width: 540px;
+    top: 90px;
+    left: 10px;
+    display: block;
+    position: absolute;
+}
+
+.movieContainer {
+    width: 540px;
+    top: 110px;
+    left: 10px;
+    position: absolute;
+    display: block;
+}
+
+.movie {
+    height: 160px;
+    width: 110px;
+    font-size: 12px;
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ff0010;
+    font-weight: bold;
+}
+
+.movie:hover {
+    box-shadow: 0 0 5px rgba(255, 0, 16, 1);
+}

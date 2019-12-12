@@ -1,0 +1,141 @@
+/* ====================================================================================================
+   DATE:      06 APR 2018
+   AUTHORS:   Kelly McKeown   David Hopkins
+   UCInetIDs: KPMCKEOW        HOPKINSD
+   ID#'s:     42806243        70404050
+   CLASS:     CS 122B
+   PROJECT:   #2
+   ----------------------------------------------------------------------------------------------------
+   DESCRIPTION:
+   ====================================================================================================
+ */
+
+#fabflixLogoContainer {
+    height: 150px;
+    width: 790px;
+    top: 50%;
+    transform: perspective(1px) translateY(-300px);
+    left: 10%;
+    /*border: 1px solid #ffffff;*/
+    /*display: block;*/
+    position: relative;
+    z-index: 3;
+}
+
+#fabflixLogoText {
+    height: 98px;
+    width: 540px;
+    padding: 5px 5px 10px 20px;
+    display: block;
+    position: relative;
+    font-family: Limelight;
+    color: #ff0010;
+    font-size: 96px;
+    /*border: 1px solid #aaaaaa;*/
+    border-radius: 9px;
+}
+
+#fabflixSloganText {
+    height: 24px;
+    width: 780px;
+    display: block;
+    position: relative;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #cccccc;
+    font-size: 36px;
+}
+
+#loginFormDiv {
+    width: 300px;
+    height: 240px;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    left: 10%;
+    margin-top: 40px;
+    position: absolute;
+    /*border: 1px solid #ffffff;*/
+    z-index: 3;
+}
+
+#loginForm {
+    /*bottom: 250px;*/
+    /*left: 250px;*/
+    display: block;
+    position: relative;
+    padding: 20px;
+    /*border: 1px solid #cccccc;*/
+    /*border-radius: 9px;*/
+    /*position: absolute;*/
+    font-family: "Julius Sans One", sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=password], textarea {
+    width: 100%;
+    /*padding: 10px 10px;*/
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: bold;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 16, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(255, 0, 16, 1);
+}
+
+input[type=submit] {
+    width: 150px;
+    left: -75px;
+    margin-left: 50%;
+    position: relative;
+    background-color: #ff0010;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Julius Sans One", sans-serif;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #333333 inset;
+    -webkit-text-fill-color: #ffffff;
+}
+
+#loginErrMsg {
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    display: block;
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #ff928e;
+    /*border: 1px solid #000000;*/
+}

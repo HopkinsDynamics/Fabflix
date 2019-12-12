@@ -1,0 +1,400 @@
+/* ====================================================================================================
+   DATE:      06 APR 2018
+   AUTHORS:   Kelly McKeown   David Hopkins
+   UCInetIDs: KPMCKEOW        HOPKINSD
+   ID#'s:     42806243        70404050
+   CLASS:     CS 122B
+   PROJECT:   #1
+   ----------------------------------------------------------------------------------------------------
+   DESCRIPTION:
+   ====================================================================================================
+ */
+
+#headerContainer {
+    height: 70px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: block;
+    position: relative;
+    /*border: 1px solid #000000;*/
+    /*background-color: blanchedalmond;*/
+    z-index: 30;
+}
+
+#logoContainer {
+    height: 58px;
+    width: 252px;
+    top: 0;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    /*border: 1px solid #000000;*/
+}
+
+#logoTextContainer {
+    height: 40px;
+    width: 250px;
+    display: block;
+    position: absolute;
+    /*border: 1px solid #000000;*/
+    cursor: pointer;
+}
+
+#fabflixLogoText {
+    height: 38px;
+    width: 200px;
+    left: 10px;
+    display: block;
+    position: absolute;
+    font-family: Limelight;
+    color: #ff0010;
+    font-size: 36px;
+    /*border: 1px solid #000000;*/
+}
+
+#fabflixSloganText {
+    height: 14px;
+    width: 250px;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #cccccc;
+    font-size: 12px;
+    /*border: 1px solid #000000;*/
+}
+
+#headerRightContainer {
+    height: 58px;
+    width: 700px;
+    top: 0;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    /*border: 1px solid #ffffff;*/
+}
+
+#buttonContainer {
+    height: 26px;
+    width: 698px;
+    top: 32px;
+    display: block;
+    position: relative;
+    /*border: 1px solid #ffffff;*/
+}
+
+.headerButton {
+    height: 25px;
+    width: 150px;
+    bottom: 0;
+    /*margin-left: 8px;*/
+    display: block;
+    position: absolute;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+************************************************************************************************/
+.headerButton:hover {
+    box-shadow: 0 0 5px rgba(255, 0, 16, 1);
+    padding: 3px 0px 3px 3px;
+    margin: -5px 1px -3px 0px;
+    /*margin-top: 5px;*/
+    border: 1px solid rgba(255, 0, 16, 1);
+    /*color: #ff0010;*/
+    background-color: #ff0010;
+    cursor: pointer;
+}
+
+#browseButton {
+    left: 8px;
+}
+
+#searchButton {
+    left: 166px;
+}
+
+#cartButton {
+    left: 324px;
+}
+
+#browseDropdown {
+    height: 35px;
+    width: 260px;
+    top: 25px;
+    left: -55px;
+    /*background-color: #333333;*/
+    display: none;
+    position: absolute;
+    z-index: 31;
+    /*border: 1px solid #ffffff;*/
+}
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+************************************************************************************************/
+#browseButton:hover #browseDropdown {
+    display: block;
+}
+
+.browseSubButton {
+    height: 16px;
+    width: 120px;
+    bottom: 4px;
+    padding-top: 4px;
+    position: absolute;
+    display: block;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    font-size: 12px;
+    font-weight: normal;
+    z-index: 32;
+}
+/***************************************************************************************************
+this is the important part, this is what triggers
+the color change for each box when the cursor hovering over this
+************************************************************************************************/
+.browseSubButton:hover {
+    box-shadow: 0 0 5px rgba(255, 0, 16, 1);
+    border: 1px solid rgba(255, 0, 16, 1);
+    color: #ff0010;
+}
+
+#genreButton {
+    left: 2px;
+}
+
+#titleButton {
+    right: 2px;
+}
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+************************************************************************************************/
+#genreButton:hover #genreDropdownContainer {
+    display: block;
+}
+
+#genreDropdownContainer {
+    height: 240px;
+    width: 260px;
+    top: 10px;
+    left: 6px;
+    display: none;
+    position: absolute;
+    /*background-color: #ffffff;*/
+    z-index: 33;
+}
+
+#genreDropdownContentBG {
+    height: 228px;
+    width: 250px;
+    top: 16px;
+    left: -5px;
+    display: block;
+    position: relative;
+    background-color: #333333;
+    box-shadow: 0 0 5px rgb(204, 204, 204);
+    /*border: 1px solid #eeeeee;*/
+    text-align: left;
+    z-index: 34;
+}
+
+.genreDropDownContent {
+    height: 216px;
+    width: 120px;
+    top: 8px;
+    left: 10px;
+    display: block;
+    position: absolute;
+    /*background-color: #ffffff;*/
+    line-height: 18px;
+    z-index: 35;
+}
+
+#genreDropDownContentRight {
+    left: 130px;
+}
+
+a:-webkit-any-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#buttonContainer a:link {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/*#genreDopdownContent a:visited {*/
+    /*color: #ffffff;*/
+    /*text-decoration: none;*/
+/*}*/
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+**************************************************************************************************/
+.genreDropDownContent a:hover {
+    color: #ff0010;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*#genreDropDownContent a:active {*/
+    /*color: #ff0010;*/
+    /*font-weight: bold;*/
+    /*text-decoration: none;*/
+/*}*/
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+***********************************************************************************************/
+#titleButton:hover #titleDropDownContainer {
+    display: block;
+}
+
+#titleDropDownContainer {
+    height: 140px;
+    width: 260px;
+    top: 10px;
+    left: -138px;
+    display: none;
+    position: absolute;
+    /*background-color: #ffffff;*/
+    z-index: 33;
+}
+
+#titleDropDownContentBG {
+    height: 124px;
+    width: 250px;
+    top: 16px;
+    left: 5px;
+    display: block;
+    position: relative;
+    background-color: #333333;
+    box-shadow: 0 0 5px rgb(204, 204, 204);
+    /*box-shadow: 0 0 5px rgb(204, 204, 204);*/
+    /*border: 1px solid #eeeeee;*/
+    text-align: left;
+    z-index: 34;
+}
+
+#titleDropDownContent table {
+    border: none;
+    text-align: center;
+}
+
+#titleDropDownContent td {
+    width: 22px;
+}
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+**************************************************************************************************/
+#titleDropDownContent a:hover {
+    color: #ff0010;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#titleDropDownContent tr.spaceAbove>td {
+    padding-top: 10px;
+}
+
+#titleDropDownContent tr.spaceUnder>td {
+    padding-bottom: 10px;
+}
+
+#titleDropDownContent tr.spaceUnderDouble>td {
+    padding-bottom: 20px;
+}
+/***************************************************************************************************
+this is the important part, this is what triggers
+the dropdown menu on the cursor hovering over this button
+**************************************************************************************************/
+#searchButton:hover #searchDropDownContainer {
+    display: block;
+}
+
+#searchDropDownContainer {
+    height: 45px;
+    width: 450px;
+    top: 6px;
+    left: -155px;
+    display: none;
+    position: relative;
+    /*background-color: #ffffff;*/
+}
+
+#searchDropDownContent {
+    height: 40px;
+    width: 440px;
+    top: 5px;
+    left: 5px;
+    display: block;
+    position: absolute;
+    background-color: #333333;
+}
+
+#searchTA {
+    width: 380px;
+    height: 16px;
+    top: 10px;
+    left: 10px;
+    display: block;
+    position: relative;
+    background-color: #eeeeee;
+    resize: none;
+}
+
+#searchTA:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px rgba(255, 0, 16, 1);
+    border: 1px solid rgba(255, 0, 16, 1);
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+#searchIcon {
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    display: block;
+    position: absolute;
+    background-image: url('/images/searchIcon.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#autocomplete {
+    position: relative;
+    display: block;
+}
+
+.ui-menu-item {
+    background-color: #999999;
+}
+
+/*.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }*/
+/*.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }*/
+/*.autocomplete-selected { background: #F0F0F0; }*/
+/*.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }*/
+/*.autocomplete-group { padding: 2px 5px; }*/
+/*.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }*/

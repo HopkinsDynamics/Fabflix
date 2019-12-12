@@ -1,0 +1,272 @@
+/* ====================================================================================================
+   DATE:      06 APR 2018
+   AUTHORS:   Kelly McKeown   David Hopkins
+   UCInetIDs: KPMCKEOW        HOPKINSD
+   ID#'s:     42806243        70404050
+   CLASS:     CS 122B
+   PROJECT:   #2
+   ----------------------------------------------------------------------------------------------------
+   DESCRIPTION:
+   ====================================================================================================
+ */
+
+#contentDiv {
+    height: 980px;
+    top: 20px;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#contentTitleText {
+    height: 24px;
+    width: 980px;
+    left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    color: #ff0010;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#movieListResultDiv {
+    width: 970px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid #000000;*/
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+}
+
+.resultDiv {
+    height: 84px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    position: relative;
+    display: block;
+    border: 1px solid #eeeeee;
+    background-color: #333333;
+}
+
+.resultPic {
+    height: 80px;
+    width: 55px;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    display: block;
+    border: 1px solid #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.resultTitleDiv {
+    height: 40px;
+    width: 590px;
+    top: 20px;
+    left: 80px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0010;
+    text-align: left;
+    cursor: pointer;
+}
+
+.resultDirectorDiv {
+    height: 16px;
+    width: 290px;
+    top: 50px;
+    left: 80px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #eeeeee;
+    text-align: left;
+}
+
+.resultYearDiv {
+    height: 16px;
+    width: 80px;
+    top: 74px;
+    left: 80px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 14px;
+    color: #eeeeee;
+    text-align: left;
+}
+
+.resultRatingDiv {
+    height: 16px;
+    width: 80px;
+    top: 74px;
+    left: 170px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 14px;
+    color: #eeeeee;
+    text-align: left;
+}
+
+.resultNumVotesDiv {
+    height: 16px;
+    width: 110px;
+    top: 74px;
+    left: 260px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 14px;
+    color: #eeeeee;
+    text-align: left;
+}
+
+.resultGenresContainer {
+    height: 40px;
+    width: 300px;
+    top: 2px;
+    right: 10px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #ff0010;*/
+    /*background-color: #3f51b5;*/
+}
+
+.resultGenreDiv {
+    height: 14px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    color: #eeeeee;
+}
+
+.resultStarsContainer {
+    height: 44px;
+    width: 580px;
+    top: 50px;
+    right: 10px;
+    position: absolute;
+    display: block;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: bold;
+    color: #eeeeee;
+    cursor: pointer;
+    /*border: 1px solid #ff0010;*/
+    /*background-color: #3f51b5;*/
+}
+
+.resultStarDiv {
+    height: 12px;
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+    /*border: 1px solid #000000;*/
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 10px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.qtyButtons {
+    height: 80px;
+    width: 90px;
+    top: 2px;
+    right: 2px;
+    position: absolute;
+    display: block;
+    /*background-color: #3f51b5;*/
+    text-align: center;
+}
+
+.movieTA {
+    height: 18px;
+    width: 28px;
+    top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    position: relative;
+    display: block;
+    resize: none;
+}
+
+.movieUpdateButton {
+    height: 22px;
+    width: 88px;
+    top: 28px;
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    color: #eeeeee;
+    font-family: Helvetica, sans-serif;
+    background-color: #ff0010;
+    border: 1px solid #eeeeee;
+}
+
+.movieDeleteButton {
+    height: 22px;
+    width: 88px;
+    bottom: 2px;
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    color: #eeeeee;
+    font-family: Helvetica, sans-serif;
+    background-color: #ff0010;
+    border: 1px solid #eeeeee;
+}
+
+#checkOutButton {
+    height: 22px;
+    width: 88px;
+    top: 40px;
+    left: 456px;
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    color: #eeeeee;
+    font-family: Helvetica, sans-serif;
+    background-color: #ff0010;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+}

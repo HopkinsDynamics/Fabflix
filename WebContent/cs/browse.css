@@ -1,0 +1,146 @@
+/* ====================================================================================================
+   DATE:      06 APR 2018
+   AUTHORS:   Kelly McKeown   David Hopkins
+   UCInetIDs: KPMCKEOW        HOPKINSD
+   ID#'s:     42806243        70404050
+   CLASS:     CS 122B
+   PROJECT:   #2
+   ----------------------------------------------------------------------------------------------------
+   DESCRIPTION:
+   ====================================================================================================
+ */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#contentDiv {
+    min-height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index:1000;
+    color: #e5e5eb;
+    max-height: 832px;
+    top: 150px;
+    max-width: 1200px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 10px;
+    padding-bottom: 18px;
+    text-align: left;
+    vertical-align: middle;
+    /*overflow-wrap: normal;*/
+    overflow: auto;
+    border-color: #ff0010;
+
+}
+.container1 {
+    overflow:auto;
+    flex-direction: row;
+}
+.bigContainer1{
+    display: inline-block;
+    overflow:auto;
+
+    min-width: fit-content;
+
+    min-height: fit-content;
+
+    max-width: 800px;
+    border-radius: 25px;
+    border: 1px solid ghostwhite;
+    margin: 2px;
+}
+
+.default1{
+    float:left;
+    display: block;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width:auto;
+    min-height:auto;
+
+}
+.starsContainer1{
+    position: relative;
+    flex-direction: column;
+    display: block;
+    width:280px;
+    min-height:auto;
+    max-width: 280px;
+    text-align: left;
+
+
+    color:#26aeea;
+    float:left;
+    min-width: auto;
+
+
+}
+
+.resultTitleDiv1 {
+    height: auto;
+    min-width: auto;
+    max-width: 200px;
+    position: relative;
+    display: block;
+    font-family: Veranda, sans-serif;
+    font-size: 20px;
+
+    text-align: left;
+    color: ghostwhite;
+    flex-direction: column;
+
+}
+
+.resultDirectorDiv1 {
+    flex-direction: column;
+    position: relative;
+    display: block;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color:#26aeea;
+    float:left;
+    min-width: auto;
+
+
+
+}
+
+.resultRatingDiv1 {
+    flex-direction: column;
+    position: relative;
+    display: block;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    text-align: right;
+    min-width: auto;
+
+}
+.resultPicture{
+    flex-direction: column;
+    position:relative;
+    display:inline;
+    height:250px;
+    width: 170px;
+    float:left;
+}
+
+.boxy1{
+    background-color: #333333;
+    padding: 20px;
+    width: 800px;
+    height: fit-content;
+    text-align: right;
+    border-color: rgba(124, 120, 123, 0.7);
+    margin: 2px;
+    overflow:auto;
+    flex-direction: column;
+    font-size: 14px;
+
+}
+
+

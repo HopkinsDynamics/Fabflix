@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+====================================================================================================
+DATE:      06 APR 2018
+AUTHORS:   Kelly McKeown   David Hopkins
+UCInetIDs: KPMCKEOW        HOPKINSD
+ID#'s:     42806243        70404050
+CLASS:     CS 122B
+PROJECT:   #2
+----------------------------------------------------------------------------------------------------
+DESCRIPTION:
+====================================================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FABFLIX: Checkout</title>
+    <!--SCRIPT LINKS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script type="text/javascript" src="js/dynamicBackground.js"></script>
+    <script type="text/javascript" src="js/checkout.js"></script>
+    <script type="text/javascript" src="js/page.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/session.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/ajaxRequest.js"></script>
+    <script type="text/javascript" src="js/processForms.js"></script>
+    <!--STYLESHEET LINKS-->
+    <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cs/checkout.css">
+    <link rel="stylesheet" type="text/css" href="cs/page.css">
+    <link rel="stylesheet" type="text/css" href="cs/footer.css">
+    <link rel="stylesheet" type="text/css" href="cs/header.css">
+    <link rel="stylesheet" type="text/css" href="cs/dynamicBGImage.css">
+</head>
+<body>
+<!--VERIFY THE USER'S SESSION-->
+<script type="text/javascript">verifySession();</script>
+
+<div id="BGImage"></div>
+<div id="fadeCover"></div>
+<script type="text/javascript">setInitialBGImage();</script>
+
+<div id="page">
+    <!-- HEADER -->
+    <div id="headerContainer">
+        <div id="logoContainer">
+            <div id="logoTextContainer" onclick="location.href='index.html';">
+                <div id="fabflixLogoText">F A B F L I X</div>
+            </div>
+            <div id="fabflixSloganText">The Best Source For Hollywood's Best</div>
+        </div>
+        <div id="headerRightContainer">
+            <div id="buttonContainer">
+                <button id="browseButton" class="headerButton ">browse
+                    <div id="browseDropdown">
+                        <div id="genreButton" class="browseSubButton">genre
+                            <div id="genreDropdownContainer">
+                                <div id="genreDropdownContentBG">
+                                    <div id="genreDropDownContentLeft" class="genreDropDownContent">
+                                        <a href="javascript:redirectToMovieListPage('Action', 'null')"     >Action</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Adult', 'null')"      >Adult</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Adventure', 'null')"  >Adventure</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Animation', 'null')"  >Animation</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Biography', 'null')"  >Biography</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Comedy', 'null')"     >Comedy</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Crime', 'null')"      >Crime</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Documentary', 'null')">Documentary</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Drama', 'null')"      >Drama</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Family', 'null')"     >Family</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Fantasy', 'null')"    >Fantasy</a><br>
+                                        <a href="javascript:redirectToMovieListPage('History', 'null')"    >History</a><br>
+                                    </div>
+                                    <div id="genreDropDownContentRight" class="genreDropDownContent">
+                                        <a href="javascript:redirectToMovieListPage('Horror', 'null')"    >Horror</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Music', 'null')"     >Music</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Musical', 'null')"   >Musical</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Mystery', 'null')"   >Mystery</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Reality-TV', 'null')">Reality-TV</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Romance', 'null')"   >Romance</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Sci-Fi', 'null')"    >Sci-Fi</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Sport', 'null')"     >Sport</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Thriller', 'null')"  >Thriller</a><br>
+                                        <a href="javascript:redirectToMovieListPage('War', 'null')"       >War</a><br>
+                                        <a href="javascript:redirectToMovieListPage('Western', 'null')"   >Western</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="titleButton" class="browseSubButton">title
+                            <div id="titleDropDownContainer">
+                                <div id="titleDropDownContentBG">
+                                    <div id="titleDropDownContent">
+                                        <table id="titleTable">
+                                            <tr class="spaceUnder spaceAbove">
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'A')">A</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'B')">B</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'C')">C</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'D')">D</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'E')">E</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'F')">F</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'G')">G</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'H')">H</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'I')">I</a><br></td>
+                                            </tr>
+                                            <tr class="spaceUnder">
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'J')">J</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'K')">K</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'L')">L</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'M')">M</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'N')">N</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'O')">O</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'P')">P</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'Q')">Q</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'R')">R</a><br></td>
+                                            </tr>
+                                            <tr class="spaceUnderDouble">
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'S')">S</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'T')">T</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'U')">U</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'V')">V</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'W')">W</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'X')">X</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'Y')">Y</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', 'Z')">Z</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '0')">0</a><br></td>
+                                            </tr>
+                                            <tr class="spaceUnder">
+                                                <td><a href="javascript:redirectToMovieListPage('null', '1')">1</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '2')">2</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '3')">3</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '4')">4</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '5')">5</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '6')">6</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '7')">7</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '8')">8</a><br></td>
+                                                <td><a href="javascript:redirectToMovieListPage('null', '9')">9</a><br></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button id="searchButton" class="headerButton" >search
+                    <div id="searchDropDownContainer">
+                        <div id="searchDropDownContent">
+                            <textarea id="searchTA" placeholder="Enter search criteria here..."></textarea>
+                            <div id="searchIcon"></div>
+                        </div>
+                    </div>
+                </button>
+                <button id="cartButton" class="headerButton" onclick="redirectToCart();">cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!--CONTENT-->
+    <div id="contentDiv">
+        <div id="contentTitleText">Checkout</div>
+        <div id="instructionText">Please provide the following information:</div>
+        <div id="formContainerDiv">
+            <form id="customerValidationForm" action="Javascript:makeCheckoutRequest();">
+                <label>
+                    First name:<br>
+                    <input type="text" name="firstname"><br>
+                </label>
+                <label>
+                    Last name:<br>
+                    <input type="text" name="lastname"><br>
+                </label>
+                <label>
+                    Address:<br>
+                    <input type="text" name="address"><br>
+                </label>
+                <label>
+                    Credit Card:<br>
+                    <input type="text" name="ccnumber"><br>
+                </label>
+                <label>
+                    Expiration Month:<br>
+                    <input type="text" name="expmonth"><br>
+                </label>
+                <label>
+                    Expiration Year:<br>
+                    <input type="text" name="expyear"><br><br>
+                </label>
+                <input type="submit" value="Submit" id="submitForm">
+            </form>
+        </div>
+        <div id="checkoutErrorText"></div>
+    </div>
+        <button id="checkOutButton" onclick="redirectToCheckoutPage();">Checkout</button>
+    </div>
+
+    <!--FOOTER-->
+    <div id="footerDiv">
+        <div id="disclaimerText"></div>
+        <script type="text/javascript">setFooter();</script>
+    </div>
+</div>
+</body>
+</html>

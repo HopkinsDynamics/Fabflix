@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+====================================================================================================
+DATE:      06 APR 2018
+AUTHORS:   Kelly McKeown   David Hopkins
+UCInetIDs: KPMCKEOW        HOPKINSD
+ID#'s:     42806243        70404050
+CLASS:     CS 122B
+PROJECT:   #2
+----------------------------------------------------------------------------------------------------
+DESCRIPTION:
+====================================================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employess Login to FABFLIX DASHBOARD</title>
+    <!--SCRIPT LINKS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script type="text/javascript" src="js/dynamicBackground.js"></script>
+    <script type="text/javascript" src="js/dashboardLogin.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/processForms.js"></script>
+    <script type="text/javascript" src="js/employeeSession.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--STYLESHEET LINKS-->
+    <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cs/login.css">
+    <link rel="stylesheet" type="text/css" href="cs/page.css">
+    <link rel="stylesheet" type="text/css" href="cs/dynamicBGImage.css">
+</head>
+<body onload="initPage();">
+<div id="BGImage"></div>
+<div id="fadeCover"></div>
+<div id="fabflixLogoContainer">
+    <div id="fabflixLogoText">F A B F L I X</div>
+    <div id="fabflixSloganText">EMPLOYEE DASHBOARD LOGIN</div>
+</div>
+<div id="loginFormDiv">
+    <form id="loginForm" method="post" action="Javascript:submitLoginInfo()">
+        <label>
+            username
+            <input align="center" type="text" placeholder="Enter username (example@email.com)" name="username">
+        </label>
+        <label>
+            password
+            <input type="password" placeholder="Enter password" name="password">
+        </label>
+        <br/>
+
+        <div class="g-recaptcha" data-sitekey="6LcWblkUAAAAADf7KZRkVHgS9_H4dD79AHc3njok"></div>
+        <br/>
+        <input type="submit" value="Sign In">
+
+    </form>
+    <div id="loginErrMsg"></div>
+</div>
+</body>
+</html>
