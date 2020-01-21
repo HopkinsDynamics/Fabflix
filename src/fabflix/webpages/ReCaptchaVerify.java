@@ -33,7 +33,7 @@ public class ReCaptchaVerify {
 
 
         // Data will be sent to the server.
-        String postParams = "secret=" + "6LcWblkUAAAAACTgob3q4xbPm-5IH7-vKtCY9w6B" + "&response=" + gRecaptchaResponse;
+        String postParams = "secret=" + "*************************" + "&response=" + gRecaptchaResponse;
 
         // Send Request
         conn.setDoOutput(true);
